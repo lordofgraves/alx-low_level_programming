@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <main.h>
 /**
  * void print_alphabet is a function that print alphabet each in a line in lower case
  */
