@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * main take value
- * Return always 0
+ * main - take value
+ * Return always 0 ( success )
  */
 int main(void)
 {
