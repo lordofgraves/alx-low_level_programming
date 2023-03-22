@@ -9,7 +9,7 @@ int main(void)
 
 	while (*str)
 	{
-		_putchar(*str)
+		_putchar(*str);
 			str++;
 	}
 	_putchar('\n');
