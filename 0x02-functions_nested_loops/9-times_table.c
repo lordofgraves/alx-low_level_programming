@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * times_table -  a function that prints the 9 times table, starting with 0
  * n = firstloop, z = innerloop, d = digits of current result
