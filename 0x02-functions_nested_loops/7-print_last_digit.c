@@ -13,11 +13,6 @@ int print_last_digit(int nld)
         pld *= -1;
     }
 
-    if (pld > 9)
-    {
-        putchar((pld / 10) + '0');
-    }
-
-    putchar(pld + '0');
-    return pld;
+    _putchar(pld + '0');
+    return (pld);
 }
