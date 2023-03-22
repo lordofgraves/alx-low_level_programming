@@ -1,16 +1,17 @@
 #include "main.h"
 /**
- * main - take value
- * Return always 0 ( success )
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char *str = "_putchar";
+	char *put = "_putchar";
 
-	while (*str)
+	while (*put)
 	{
-		_putchar(*str);
-			str++;
+		_putchar(*put);
+		put++;
 	}
 	_putchar('\n');
 

@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
  * void print_alphabet is a function that print alphabet each in a line in lower case
  */
@@ -8,7 +8,7 @@ void print_alphabet(void)
 
 	for (z = 'a'; z <= 'z'; z++)
 	{
-		putchar(n);
+		_putchar(z);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
