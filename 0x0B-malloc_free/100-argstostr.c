@@ -32,7 +32,7 @@ char *argstostr(int ac, char **av)
 	len2 = 0;
 	for (i = 0; i < (unsigned int) ac; i++)
 	{
-		for (j = 0; av[i][j]; j++) 
+		for (j = 0; av[i][j]; j++)
 		{
 			gather[len2] = av[i][j];
 			len2++;
