@@ -1,9 +1,8 @@
 #include "lists.h"
 
 /**
- * print_listint - prints all the elements of listint_t
- * @temp: temporary variable to hold a node
- * @h: head of listint_t
+ * print_listint - prints all the elements of list
+ * @h: head of List
  *
  * Return: the number of nodes
  */
