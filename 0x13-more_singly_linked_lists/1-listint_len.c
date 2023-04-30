@@ -6,14 +6,14 @@
  *
  * Return: the number of element in listint_t
  */
-size_t listint_len(const listint_t *h);
+size_t listint_len(const listint_t *h)
 {
 	size_t count = 0;
 
-	while (h)
+	while ( h != NULL )
 	{
-		h = h->next;
 		count++;
+		h = h->next;
 	}
 
 	return (count);
