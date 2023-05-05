@@ -6,14 +6,22 @@
  */
 void print_binary(unsigned long int n)
 {
-	int num_bits = sizeof(unsigned long int) * 8;
-	int i;
+	unsigned long int leftmostbit = 1ul << 63;
+	char p = '0';
 
-	for (i = num_bits - 1; i >= 0; i--)
+	while (!(leftmostbit & n) && leftmostbit != 0)
+		leftmostbit = leftmostbit >> 1;
+
+	if (leftmostbit == 0)
+		write(1, &p, 1);
+
+	while (leftmostbit)
 	{
-		if ((n >> i) & 1)
-			putchar('1');
+		if (leftmostbit & n)
+			p = '1';
 		else
-			putchar('0');
+			p = '0';
+		write(1, &p, 1);
+		leftmostbit = leftmostbit >> 1;
 	}
 }
