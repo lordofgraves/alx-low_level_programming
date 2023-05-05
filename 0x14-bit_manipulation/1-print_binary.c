@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
  * print_binary - prints the binary of a number
  * @n: the number to convert
