@@ -6,20 +6,17 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 1ul << 63;
+	int bits[sizeof(unsigned long int) * 8];
+	int i, j;
 
-	if (n == 0)
+	for (i = 0; i < sizeof(unsigned long int) * 8; i++)
 	{
-		putchar('0');
-		return;
+		bits[i] = n & 1;
+		n >>= 1;
 	}
 
-	while ((mask & n) == 0)
-		mask = mask >> 1;
-
-	while (mask) 
+	for (j = i - 1; j >= 0; j--)
 	{
-		putchar((n & mask) ? '1' : '0');
-		mask = mask >> 1
+		_putchar(bits[j] + '0');
 	}
 }
