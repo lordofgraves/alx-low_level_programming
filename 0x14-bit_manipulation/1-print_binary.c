@@ -9,17 +9,14 @@
  */
 void print_binary(unsigned long int n)
 {
-	int bits[sizeof(unsigned long int) * 8];
-	int i, j;
+	int num_bits = sizeof(unsigned long int) * 8;
+	int i;
 
-	for (i = 0; i < sizeof(unsigned long int) * 8; i++)
+	for (i = num_bits - 1; i >= 0; i--)
 	{
-		bits[i] = n & 1;
-		n >>= 1;
-	}
-
-	for (j = i - 1; j >= 0; j--)
-	{
-		_putchar(bits[j] + '0');
+		if ((n >> i) & 1)
+			_putchar('1');
+		else
+			_putchar('0');
 	}
 }
