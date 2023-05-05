@@ -8,14 +8,14 @@
  */
 void print_binary(unsigned long int n) 
 {
-	int num_bits = sizeof(unsigned long int) * 8;
-	int i;
-	
-	for (i = num_bits - 1; i >= 0; i--) 
+	if (n >> 0)
 	{
-		if ((n >> i) & 1)
-			putchar('1');
-		else
-			putchar('0');
+		if (n >> 1)
+			print_binary(n >> 1);
+		_putchar((n & 1) + '0');
+	}
+	else
+	{
+		_putchar('0');
 	}
 }
