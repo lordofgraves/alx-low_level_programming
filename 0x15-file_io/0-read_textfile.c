@@ -14,15 +14,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t fread, fwrite, fclose;
 
 	if (filename == NULL)
+	{
 		return (0);
+	}
 
 	textbuffer = malloc(sizeof(char) * letters);
 	if (textbuffer == NULL)
+	{
 		return (0);
+	}
 
 	fopen = open(filename, O_RDONLY);
 
-	if (fopen == NULL)
+	if (fopen == -1)
 	{
 		free(textbuffer);
 		return (0);
@@ -30,18 +34,24 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	fread = read(fopen, textbuffer, letters);
 
-	if (fread == NULL)
-		return (0);
+	if (fread == -1)
+	{
+		return (-1);
+	}
 
 	fwrite = write(STDOUT_FILENO, textbuffer, fread);
 
-	if (fwrite == NULL)
-		return (0);
+	if (fwrite == -1)
+	{
+		return (-1);
+	}
 
 	fclose = close(fopen);
 
-	if (fclose == NULL)
-		return (0);
+	if (fclose == -1)
+	{
+		return (-1);
+	}
 
 	return (fread);
 }
