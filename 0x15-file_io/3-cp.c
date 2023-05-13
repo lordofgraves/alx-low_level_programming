@@ -13,7 +13,7 @@
  * @msg: message after the error.
  * @c: store the error code used, 97,98,99.
  */
-void error_handler(const char *msg, int c);
+void error_handler(const char *msg, int code);
 /**
  * main - copies the content of a file to another file.
  * @argc: number of arguments.
@@ -21,9 +21,9 @@ void error_handler(const char *msg, int c);
  */
 int main(int argc, char **argv);
 
-void error_handler(const char *msg, int c) {
+void error_handler(const char *msg, int code) {
         fprintf(stderr, "%s", msg);
-        exit(c);
+        exit(code);
 }
 
 int main(int argc, char **argv){
